@@ -49,16 +49,8 @@
 ## 🚀 Demo
 
 ### Live Application
-🌐 **Frontend**: [https://your-frontend-url.com](https://your-frontend-url.com)
-🔗 **API**: [https://resume-analyzer-lebh.onrender.com](https://resume-analyzer-lebh.onrender.com)
-
-### Screenshots
-
-![Upload Interface](./docs/images/upload-interface.png)
-*Upload your resume and select your target industry*
-
-![Analysis Results](./docs/images/analysis-results.png)
-*Comprehensive analysis with actionable insights*
+🌐 **Frontend**: [https://resume-analyzer-lebh.onrender.com](https://resume-analyzer-lebh.onrender.com)
+🔗 **API**: [https://resume-analyzer-lebh.onrender.com/api/analyze](https://resume-analyzer-lebh.onrender.com/api/analyze)
 
 ## 🛠 Technology Stack
 
