@@ -1,0 +1,25 @@
+# BERT and Advanced NLP Dependencies
+# Install these for enhanced semantic analysis capabilities
+# Run: pip install -r bert_requirements.txt
+
+# Core transformer models
+transformers>=4.30.0
+torch>=2.0.0
+sentence-transformers>=2.2.0
+
+# Additional ML dependencies
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# Optional GPU support (uncomment if you have CUDA)
+# torch-audio>=2.0.0
+# torch-vision>=0.15.0
+
+# For better tokenization
+tokenizers>=0.13.0
+
+# Memory optimization
+accelerate>=0.20.0
+
+# Note: These dependencies are large (~2-3GB)
+# Install only if you want advanced BERT-based features

@@ -1,9 +1,11 @@
 import json
 import re
 import os
+from skill_gap_analyzer import SkillGapAnalyzer
 
 class IndustryAnalyzer:
     def __init__(self):
+        self.skill_gap_analyzer = SkillGapAnalyzer()
         self.industries = {
             "software_engineer": {
                 "required_skills": [
@@ -14,8 +16,7 @@ class IndustryAnalyzer:
                     "git", "ci/cd", "testing", "algorithms", "data structures"
                 ],
                 "recommended_sections": [
-                    "technical skills", "projects", "experience", "education",
-                    "github", "open source contributions", "certifications"
+                    "technical skills", "projects", "experience", "education","skills","open source contributions", "certifications"
                 ],
                 "action_verbs": [
                     "developed", "implemented", "architected", "designed", "built",
@@ -152,6 +153,13 @@ class IndustryAnalyzer:
         overall_score = int((skills_score * 0.4) + (sections_score * 0.2) + 
                            (verbs_score * 0.2) + (achievements_score * 0.2))
         
+        # Generate skill gap analysis with learning recommendations
+        skill_gap_analysis = self.skill_gap_analyzer.analyze_skill_gaps(
+            found_skills, 
+            industry_data["required_skills"], 
+            industry
+        )
+        
         # Generate suggestions
         suggestions = []
         
@@ -169,6 +177,11 @@ class IndustryAnalyzer:
         
         if achievements_score < 80:
             suggestions.append("Focus more on quantifiable achievements relevant to your industry")
+        
+        # Add learning path suggestions
+        if skill_gap_analysis["priority_skills_to_learn"]:
+            priority_skills = [skill["skill"] for skill in skill_gap_analysis["priority_skills_to_learn"][:3]]
+            suggestions.append(f"Consider learning these high-priority skills: {', '.join(priority_skills)}")
         
         return {
             "industry": industry,
@@ -192,5 +205,6 @@ class IndustryAnalyzer:
                 "score": achievements_score,
                 "achievement_phrases_found": found_achievements
             },
-            "suggestions": suggestions
+            "suggestions": suggestions,
+            "skill_gap_analysis": skill_gap_analysis  # New feature: Detailed skill gap analysis with learning paths
         }

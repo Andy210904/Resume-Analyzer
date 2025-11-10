@@ -1,4 +1,4 @@
-# 🎯 AI Resume Analyzer
+# 🎯 IntelliResume
 
 > An intelligent resume analysis tool that provides comprehensive feedback and industry-specific insights to help job seekers optimize their resumes.
 
@@ -22,6 +22,7 @@
 ## ✨ Features
 
 ### 🔍 **Comprehensive Resume Analysis**
+
 - **Overall scoring** with detailed breakdown
 - **Section-wise analysis** (Education, Experience, Skills, Projects)
 - **Word count** and resume length optimization
@@ -29,18 +30,21 @@
 - **Keyword extraction** for ATS compatibility
 
 ### 🏭 **Industry-Specific Insights**
+
 - **Software Engineer** - Tech skills, frameworks, and methodologies
 - **Data Scientist** - ML/AI tools, statistical methods, and analytics
 - **Marketing** - Digital marketing, campaigns, and growth strategies
 - **Finance** - Financial modeling, analysis, and regulatory knowledge
 
 ### 📊 **Advanced Analytics**
+
 - **Skills gap analysis** with missing skill recommendations
 - **Achievement-focused feedback** with quantifiable metrics
 - **Section completeness** evaluation
 - **Professional language assessment**
 
 ### 🎨 **User-Friendly Interface**
+
 - **Drag-and-drop** file upload (PDF & DOCX support)
 - **Real-time analysis** with progress indicators
 - **Responsive design** for all devices
@@ -49,20 +53,22 @@
 ## 🚀 Demo
 
 ### Live Application
+
 🌐 **Frontend**: [https://your-frontend-url.com](https://your-frontend-url.com)
 🔗 **API**: [https://resume-analyzer-lebh.onrender.com](https://resume-analyzer-lebh.onrender.com)
 
 ### Screenshots
 
 ![Upload Interface](./docs/images/upload-interface.png)
-*Upload your resume and select your target industry*
+_Upload your resume and select your target industry_
 
 ![Analysis Results](./docs/images/analysis-results.png)
-*Comprehensive analysis with actionable insights*
+_Comprehensive analysis with actionable insights_
 
 ## 🛠 Technology Stack
 
 ### Backend
+
 - **Framework**: Flask 2.3.3
 - **NLP**: spaCy, NLTK, TextBlob
 - **Document Processing**: PyPDF2, python-docx
@@ -70,12 +76,14 @@
 - **Deployment**: Render
 
 ### Frontend
+
 - **Framework**: React 19.1.0
 - **Styling**: Bootstrap 5.3.6
 - **HTTP Client**: Axios 1.9.0
 - **Build Tool**: Create React App
 
 ### AI/ML Libraries
+
 - **Natural Language Processing**: spaCy (en_core_web_sm)
 - **Text Analysis**: NLTK, TextBlob
 - **Sentiment Analysis**: TextBlob
@@ -84,6 +92,7 @@
 ## 📦 Installation
 
 ### Prerequisites
+
 - **Python** 3.8 or higher
 - **Node.js** 14 or higher
 - **npm** or **yarn**
@@ -91,29 +100,33 @@
 ### Backend Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Andy210904/AI-Resume-Analyzer.git
    cd AI-Resume-Analyzer
    ```
 
 2. **Set up virtual environment**
+
    ```bash
    cd backend
    python -m venv venv
-   
+
    # Windows
    venv\Scripts\activate
-   
+
    # macOS/Linux
    source venv/bin/activate
    ```
 
 3. **Install Python dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Download spaCy language model**
+
    ```bash
    python -m spacy download en_core_web_sm
    ```
@@ -127,11 +140,13 @@
 ### Frontend Setup
 
 1. **Navigate to frontend directory**
+
    ```bash
    cd frontend
    ```
 
 2. **Install Node.js dependencies**
+
    ```bash
    npm install
    ```
@@ -145,6 +160,7 @@
 ### Build for Production
 
 1. **Build the frontend**
+
    ```bash
    cd frontend
    npm run build
@@ -163,10 +179,12 @@
 4. **Review Results**: Get detailed feedback and suggestions
 
 ### Supported File Types
+
 - **PDF** (.pdf)
 - **Microsoft Word** (.docx)
 
 ### Supported Industries
+
 - **Software Engineer**: Full-stack, backend, frontend, DevOps
 - **Data Scientist**: ML, AI, analytics, research
 - **Marketing**: Digital marketing, content, growth
@@ -177,9 +195,11 @@
 ### Endpoints
 
 #### POST `/api/analyze`
+
 Analyzes an uploaded resume file.
 
 **Request:**
+
 ```javascript
 // Form Data
 {
@@ -189,6 +209,7 @@ Analyzes an uploaded resume file.
 ```
 
 **Response:**
+
 ```javascript
 {
   "overall_score": 85,
@@ -222,6 +243,7 @@ Analyzes an uploaded resume file.
 ```
 
 **Error Response:**
+
 ```javascript
 {
   "error": "File type not allowed"
@@ -256,18 +278,21 @@ AI-Resume-Analyzer/
 ## 🎯 Key Features Breakdown
 
 ### Resume Analysis Engine
+
 - **Text Extraction**: Handles PDF and DOCX formats
 - **Section Detection**: Automatically identifies resume sections
 - **Content Analysis**: Evaluates completeness and quality
 - **Scoring Algorithm**: Weighted scoring based on industry standards
 
 ### Industry Intelligence
+
 - **Skill Matching**: Compares against industry-required skills
 - **Section Recommendations**: Suggests relevant resume sections
 - **Action Verb Analysis**: Identifies impactful language
 - **Achievement Detection**: Recognizes quantifiable accomplishments
 
 ### NLP Capabilities
+
 - **Keyword Extraction**: Identifies important terms and phrases
 - **Sentiment Analysis**: Evaluates overall tone and positivity
 - **Language Quality**: Assesses professionalism and clarity
@@ -276,6 +301,7 @@ AI-Resume-Analyzer/
 ## 🚀 Deployment
 
 ### Backend Deployment (Render)
+
 1. Connect your GitHub repository to Render
 2. Select "Web Service"
 3. Set build command: `pip install -r requirements.txt`
@@ -283,6 +309,7 @@ AI-Resume-Analyzer/
 5. Add environment variables if needed
 
 ### Frontend Deployment (Netlify/Vercel)
+
 1. Build the project: `npm run build`
 2. Deploy the `build` folder
 3. Configure redirects for single-page application
@@ -307,6 +334,7 @@ We welcome contributions! Please follow these steps:
 5. **Open a Pull Request**
 
 ### Development Guidelines
+
 - Follow PEP 8 for Python code
 - Use ESLint for JavaScript code
 - Add tests for new features
@@ -327,7 +355,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Andy210904** - *Initial work* - [GitHub Profile](https://github.com/Andy210904)
+- **Andy210904** - _Initial work_ - [GitHub Profile](https://github.com/Andy210904)
 
 ## 🙏 Acknowledgments
 
